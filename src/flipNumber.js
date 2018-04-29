@@ -1,0 +1,184 @@
+// @flow
+import debounce from 'lodash/debounce';
+import Animate from 'react-simple-animate';
+
+const commonAnimateStyle = {
+  position: 'absolute',
+  height: '100%',
+  transformStyle: 'preserve-3d',
+};
+const easeType = 'cubic-bezier(0.19, 1, 0.22, 1)';
+const revolutionDegrees = 360;
+const resetRouteCounter = 1000;
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const rotateDegreePerNumber = 36;
+
+type PropTypes = {
+  position: number,
+  length: number,
+  height: number,
+  color: string,
+  background: string,
+  width: number,
+  perspective: number,
+  durationSeconds: number,
+  activeNumber: number,
+  delaySeconds: number,
+  startAnimation: boolean,
+};
+
+type StateTypes = {
+  degree: number,
+  rotateCounter: number,
+  isStatic: boolean,
+};
+
+export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
+  state = {
+    degree: 0,
+    rotateCounter: 0,
+    rotateDegreePerNumber: 0,
+    isStatic: false,
+  };
+
+  updateNumberTimeout: TimeoutID;
+
+  makeStatic = debounce(() => {
+    this.setState({ isStatic: true });
+  }, this.props.durationSeconds * 1000);
+
+  makeDynamic = () => {
+    this.setState({ isStatic: false });
+  };
+
+  updateNumber = (activeNumber: number) => {
+    this.makeDynamic();
+    this.setState(({ rotateCounter }) => {
+      const animateDegree = numbers.findIndex(v => v === activeNumber) * rotateDegreePerNumber;
+
+      return {
+        ...(activeNumber === 0
+          ? {
+              rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
+            }
+          : null),
+        degree: rotateCounter * revolutionDegrees - animateDegree,
+      };
+    }, this.makeStatic);
+  };
+
+  shouldComponentUpdate(nextProps: PropTypes, nextState: StateTypes) {
+    return (
+      nextProps.activeNumber !== this.props.activeNumber ||
+      this.state.degree === 0 ||
+      nextProps.startAnimation !== this.props.startAnimation ||
+      nextState.isStatic !== this.state.isStatic
+    );
+  }
+
+  componentWillReceiveProps({ activeNumber }: PropTypes) {
+    this.updateNumber(activeNumber);
+  }
+
+  componentDidMount() {
+    this.updateNumberTimeout = setTimeout(() => this.updateNumber(this.props.activeNumber), 50 * this.props.position);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.updateNumberTimeout);
+  }
+
+  render() {
+    const {
+      activeNumber,
+      height,
+      color,
+      background,
+      width,
+      perspective,
+      durationSeconds,
+      startAnimation,
+      delaySeconds,
+      length,
+      position,
+    } = this.props;
+    const { degree, isStatic } = this.state;
+    const viewPortSize = {
+      width: `${width}px`,
+      height: `${height + 3}px`,
+    };
+    const translateZ = height / 2 + height;
+
+    return (
+      <span
+        style={{
+          ...viewPortSize,
+          perspective,
+          overflow: 'hidden',
+          display: 'inline-block',
+          textAlign: 'left',
+          height,
+        }}
+      >
+        <Animate
+          tag="span"
+          startAnimation={startAnimation}
+          startStyle={{
+            ...commonAnimateStyle,
+          }}
+          endStyle={{
+            ...commonAnimateStyle,
+            transform: `rotateX(${degree}deg)`,
+          }}
+          {...{ easeType, durationSeconds, delaySeconds }}
+        >
+          {numbers.map((n, i) => (
+            <span
+              style={{
+                ...viewPortSize,
+                height,
+                lineHeight: `${height}px`,
+                fontSize: `${height - 1}px`,
+                position: 'absolute',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+                WebkitFontSmoothing: 'antialiased',
+                color,
+                background,
+                transform: `rotateX(${rotateDegreePerNumber * i}deg) translateZ(${translateZ}px)`,
+              }}
+              key={i}
+            >
+              {n}
+            </span>
+          ))}
+        </Animate>
+
+        <span
+          data={length - position}
+          style={{
+            ...viewPortSize,
+            height,
+            lineHeight: `${height}px`,
+            fontSize: `${height - 1}px`,
+            left: `${length - position > 4 ? 0.25 : 0}px`, // hacky fix for weird misalignment in Chrome.
+            position: 'absolute',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            WebkitFontSmoothing: 'antialiased',
+            color,
+            background,
+            transform: `rotateX(0deg) translateZ(${translateZ}px)`,
+            visibility: isStatic ? 'visible' : 'hidden',
+          }}
+        >
+          {activeNumber}
+        </span>
+      </span>
+    );
+  }
+}

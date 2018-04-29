@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlipNumbers should render correctly 1`] = `
+<section
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+    }
+  }
+>
+  <FlipNumber
+    activeNumber={0}
+    background="white"
+    color="black"
+    delaySeconds={0.3}
+    durationSeconds={0.3}
+    height={20}
+    length={5}
+    perspective="1000px"
+    position={0}
+    startAnimation={false}
+    width={20}
+  />
+  <FlipNumber
+    activeNumber={0}
+    background="white"
+    color="black"
+    delaySeconds={0.3}
+    durationSeconds={0.3}
+    height={20}
+    length={5}
+    perspective="1000px"
+    position={1}
+    startAnimation={false}
+    width={20}
+  />
+  <span
+    className=":"
+  >
+    :
+  </span>
+  <FlipNumber
+    activeNumber={0}
+    background="white"
+    color="black"
+    delaySeconds={0.3}
+    durationSeconds={0.3}
+    height={20}
+    length={5}
+    perspective="1000px"
+    position={2}
+    startAnimation={false}
+    width={20}
+  />
+  <FlipNumber
+    activeNumber={0}
+    background="white"
+    color="black"
+    delaySeconds={0.3}
+    durationSeconds={0.3}
+    height={20}
+    length={5}
+    perspective="1000px"
+    position={3}
+    startAnimation={false}
+    width={20}
+  />
+</section>
+`;
