@@ -6,8 +6,8 @@ jest.mock('../src/flipNumber', () => 'FlipNumber');
 
 describe('FlipNumbers', () => {
   const props = {
-    numbersToDisplay: '00:00',
-    breakCharacterClassName: ':',
+    numbers: '00:00',
+    nonNumberStyle: ':',
     height: 20,
     width: 20,
     color: 'black',

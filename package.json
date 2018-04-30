@@ -1,7 +1,7 @@
 {
-  "name": "react-simple-animate-number",
+  "name": "flip-number",
   "version": "0.0.1-beta.1",
-  "description": "react simple animate number",
+  "description": "flip number",
   "main": "lib/index.js",
   "keywords": [
     "react",
@@ -19,11 +19,11 @@
     "prepublish": "yarn test && yarn flow && yarn lint && yarn run clean && yarn build",
     "flow": "flow"
   },
-  "repository": "https://github.com/bluebill1049/react-simple-animate-number.git",
+  "repository": "https://github.com/bluebill1049/flip-number.git",
   "author": "beier luo",
   "license": "Mit",
   "bugs": {
-    "url": "https://github.com/bluebill1049/react-simple-animate-number/issues"
+    "url": "https://github.com/bluebill1049/flip-number/issues"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -34,6 +34,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-babel": "^5.1.0",

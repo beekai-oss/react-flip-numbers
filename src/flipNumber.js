@@ -30,15 +30,14 @@ type PropTypes = {
 
 type StateTypes = {
   degree: number,
-  rotateCounter: number,
   isStatic: boolean,
 };
+
+let rotateCounter = 0;
 
 export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
   state = {
     degree: 0,
-    rotateCounter: 0,
-    rotateDegreePerNumber: 0,
     isStatic: false,
   };
 
@@ -75,15 +74,14 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
 
   updateNumber = (activeNumber: number) => {
     this.makeDynamic();
-    this.setState(({ rotateCounter }) => {
+    this.setState(() => {
       const animateDegree = numbers.findIndex(v => v === activeNumber) * rotateDegreePerNumber;
 
+      if (activeNumber === 0) {
+        rotateCounter = rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1;
+      }
+
       return {
-        ...(activeNumber === 0
-          ? {
-            rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
-          }
-          : null),
         degree: (rotateCounter * revolutionDegrees) - animateDegree,
       };
     }, this.makeStatic);
@@ -150,7 +148,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
                 background,
                 transform: `rotateX(${rotateDegreePerNumber * i}deg) translateZ(${translateZ}px)`,
               }}
-              key={`${rotateDegreePerNumber}`}
+              key={`${rotateDegreePerNumber * i}`}
             >
               {n}
             </span>

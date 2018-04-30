@@ -1,7 +1,10 @@
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import FlipNumber from '../src/flipNumber';
 import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 jest.mock('react-simple-animate', () => 'Animate');
 
@@ -67,22 +70,5 @@ describe('FlipNumber', () => {
       />
     );
     expect(tree).toMatchSnapshot();
-  });
-
-  it('should reset the rotate position when it is been running for 1000 times', () => {
-    const tree = shallow(<FlipNumber {...props} />);
-
-    tree.setState({
-      rotateCounter: 1001,
-    });
-
-    tree.setProps({
-      numbers,
-      activeNumber: 0,
-    });
-
-    expect(tree.state()).toMatchObject({
-      rotateCounter: 0,
-    });
   });
 });
