@@ -1,6 +1,6 @@
 {
-  "name": "flip-number",
-  "version": "0.0.1-beta.1",
+  "name": "flip-your-number",
+  "version": "0.0.1-beta.2",
   "description": "flip number",
   "main": "lib/index.js",
   "keywords": [

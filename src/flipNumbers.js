@@ -47,7 +47,7 @@ export default function FlipNumbers({
 
         if (animate) {
           numberCounter += 1;
-          return !Number.isNaN(n) ? (
+          return !Number.isNaN(parseInt(n, 10)) ? (
             <FlipNumber
               {...{
                 key,
@@ -69,7 +69,7 @@ export default function FlipNumbers({
           );
         }
 
-        return !Number.isNaN(n) ? (
+        return !Number.isNaN(parseInt(n, 10)) ? (
           <span
             style={{
               padding: 0,
