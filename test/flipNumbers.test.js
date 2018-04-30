@@ -1,7 +1,8 @@
 import renderer from 'react-test-renderer';
-import FlipNumbers from 'universal/components/flipNumbers/flipNumbers';
+import FlipNumbers from '../src/flipNumbers';
+import React from 'react';
 
-jest.mock('./flipNumber', () => 'FlipNumber');
+jest.mock('../src/flipNumber', () => 'FlipNumber');
 
 describe('FlipNumbers', () => {
   const props = {

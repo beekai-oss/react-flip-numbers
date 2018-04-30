@@ -1,12 +1,12 @@
 {
-  "name": "react-simple-count-number",
+  "name": "react-simple-animate-number",
   "version": "0.0.1-beta.1",
-  "description": "react simple count number",
+  "description": "react simple animate number",
   "main": "lib/index.js",
   "keywords": [
     "react",
     "number",
-    "count"
+    "animate"
   ],
   "scripts": {
     "clean": "rimraf lib/",
@@ -19,11 +19,11 @@
     "prepublish": "yarn test && yarn flow && yarn lint && yarn run clean && yarn build",
     "flow": "flow"
   },
-  "repository": "https://github.com/bluebill1049/react-simple-count-number.git",
+  "repository": "https://github.com/bluebill1049/react-simple-animate-number.git",
   "author": "beier luo",
   "license": "Mit",
   "bugs": {
-    "url": "https://github.com/bluebill1049/react-simple-count-number/issues"
+    "url": "https://github.com/bluebill1049/react-simple-animate-number/issues"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -33,16 +33,16 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.3.0",
     "eslint": "^3.4.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-flowtype": "^2.35.0",
+    "eslint-plugin-flowtype": "^2.46.3",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "flow-bin": "^0.53.0",
-    "flow-typed": "^2.1.5",
+    "flow-bin": "^0.71.0",
+    "flow-typed": "^2.4.0",
     "jest": "^22.4.3",
     "react": "16.3.2",
     "react-dom": "16.3.2",
@@ -54,6 +54,7 @@
     "react-dom": ">= 15.6.1"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "react-simple-animate": "^1.9.0"
   }
 }

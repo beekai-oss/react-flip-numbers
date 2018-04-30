@@ -1,6 +1,7 @@
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import FlipNumber from './flipNumber';
+import FlipNumber from '../src/flipNumber';
+import React from 'react';
 
 jest.mock('react-simple-animate', () => 'Animate');
 

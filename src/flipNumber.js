@@ -1,6 +1,7 @@
 // @flow
 import debounce from 'lodash/debounce';
 import Animate from 'react-simple-animate';
+import React from 'react';
 
 const commonAnimateStyle = {
   position: 'absolute',

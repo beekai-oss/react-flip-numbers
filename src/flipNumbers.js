@@ -1,23 +1,24 @@
 // @flow
 import FlipNumber from './flipNumber';
+import React from 'react';
 
 type PropTypes = {
-  numbersToDisplay: string | Array<string>,
-  breakCharacterClassName: string,
+  numbers: string | Array<string>,
+  nonNumberStyle: string,
   height: number,
   width: number,
   color: string,
   background: string,
-  perspective: number,
+  perspective?: number,
   durationSeconds?: number,
   delaySeconds?: number,
-  animate?: boolean,
+  animate: boolean,
   startAnimation?: boolean,
 };
 
 export default function flipNumbers({
-  numbersToDisplay,
-  breakCharacterClassName,
+  numbers,
+  nonNumberStyle,
   height,
   width,
   color,
@@ -37,9 +38,9 @@ export default function flipNumbers({
         alignItems: 'center',
       }}
     >
-      {Array.from(numbersToDisplay).map((n, key) => {
+      {Array.from(numbers).map((n, key) => {
         const nonNumber = (
-          <span className={breakCharacterClassName} key={key}>
+          <span style={nonNumberStyle} key={key}>
             {n}
           </span>
         );
@@ -59,7 +60,7 @@ export default function flipNumbers({
                 delaySeconds,
               }}
               position={numberCounter++}
-              length={numbersToDisplay.length}
+              length={numbers.length}
               activeNumber={parseInt(n, 10)}
             />
           ) : (
@@ -72,7 +73,7 @@ export default function flipNumbers({
             style={{
               padding: 0,
             }}
-            className={breakCharacterClassName}
+            className={nonNumberStyle}
             key={key}
           >
             {n}
