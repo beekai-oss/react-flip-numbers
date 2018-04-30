@@ -12,11 +12,11 @@ type PropTypes = {
   perspective?: number,
   durationSeconds?: number,
   delaySeconds?: number,
-  animate: boolean,
+  animate?: boolean,
   startAnimation?: boolean,
 };
 
-export default function flipNumbers({
+export default function FlipNumbers({
   numbers,
   nonNumberStyle,
   height,
@@ -25,7 +25,7 @@ export default function flipNumbers({
   background,
   perspective,
   durationSeconds,
-  animate = true,
+  animate,
   startAnimation,
   delaySeconds,
 }: PropTypes) {
@@ -40,13 +40,14 @@ export default function flipNumbers({
     >
       {Array.from(numbers).map((n, key) => {
         const nonNumber = (
-          <span style={nonNumberStyle} key={key}>
+          <span style={nonNumberStyle} key={numberCounter}>
             {n}
           </span>
         );
 
         if (animate) {
-          return !isNaN(n) ? (
+          numberCounter += 1;
+          return !Number.isNaN(n) ? (
             <FlipNumber
               {...{
                 key,
@@ -59,7 +60,7 @@ export default function flipNumbers({
                 startAnimation,
                 delaySeconds,
               }}
-              position={numberCounter++}
+              position={numberCounter}
               length={numbers.length}
               activeNumber={parseInt(n, 10)}
             />
@@ -68,13 +69,13 @@ export default function flipNumbers({
           );
         }
 
-        return !isNaN(n) ? (
+        return !Number.isNaN(n) ? (
           <span
             style={{
               padding: 0,
             }}
             className={nonNumberStyle}
-            key={key}
+            key={numberCounter}
           >
             {n}
           </span>
@@ -85,3 +86,11 @@ export default function flipNumbers({
     </section>
   );
 }
+
+FlipNumbers.defaultProps = {
+  perspective: 500,
+  durationSeconds: 0.3,
+  animate: true,
+  startAnimation: false,
+  delaySeconds: 0,
+};

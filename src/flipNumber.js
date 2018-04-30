@@ -42,6 +42,27 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
     isStatic: false,
   };
 
+  componentDidMount() {
+    this.updateNumberTimeout = setTimeout(() => this.updateNumber(this.props.activeNumber), 50 * this.props.position);
+  }
+
+  componentWillReceiveProps({ activeNumber }: PropTypes) {
+    this.updateNumber(activeNumber);
+  }
+
+  shouldComponentUpdate(nextProps: PropTypes, nextState: StateTypes) {
+    return (
+      nextProps.activeNumber !== this.props.activeNumber ||
+      this.state.degree === 0 ||
+      nextProps.startAnimation !== this.props.startAnimation ||
+      nextState.isStatic !== this.state.isStatic
+    );
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.updateNumberTimeout);
+  }
+
   updateNumberTimeout: TimeoutID;
 
   makeStatic = debounce(() => {
@@ -60,34 +81,13 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       return {
         ...(activeNumber === 0
           ? {
-              rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
-            }
+            rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
+          }
           : null),
-        degree: rotateCounter * revolutionDegrees - animateDegree,
+        degree: (rotateCounter * revolutionDegrees) - animateDegree,
       };
     }, this.makeStatic);
   };
-
-  shouldComponentUpdate(nextProps: PropTypes, nextState: StateTypes) {
-    return (
-      nextProps.activeNumber !== this.props.activeNumber ||
-      this.state.degree === 0 ||
-      nextProps.startAnimation !== this.props.startAnimation ||
-      nextState.isStatic !== this.state.isStatic
-    );
-  }
-
-  componentWillReceiveProps({ activeNumber }: PropTypes) {
-    this.updateNumber(activeNumber);
-  }
-
-  componentDidMount() {
-    this.updateNumberTimeout = setTimeout(() => this.updateNumber(this.props.activeNumber), 50 * this.props.position);
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.updateNumberTimeout);
-  }
 
   render() {
     const {
@@ -108,7 +108,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       width: `${width}px`,
       height: `${height + 3}px`,
     };
-    const translateZ = height / 2 + height;
+    const translateZ = (height / 2) + height;
 
     return (
       <span
@@ -150,7 +150,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
                 background,
                 transform: `rotateX(${rotateDegreePerNumber * i}deg) translateZ(${translateZ}px)`,
               }}
-              key={i}
+              key={`${rotateDegreePerNumber}`}
             >
               {n}
             </span>
