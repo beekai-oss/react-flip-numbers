@@ -39,7 +39,7 @@ Features:
 | Prop                  | Type     | Required | Description                                                                            |
 | :-------------------- | :------- | :------: | :------------------------------------------------------------------------------------- |
 | `numbers`      | string  |    ✓     |                                  |
-| `nonNumberStyle`            | {[string]: string | number}     |          | Css inline style for not number eg , : . |
+| `nonNumberStyle`            | string    |          | Css inline style for not number eg , : . |
 | `height`              | number |    ✓      | Individual number height |
 | `width`              | number |    ✓      | Individual number width |
 | `color`              | string |     ✓     | Number color |
