@@ -16,6 +16,12 @@ Features:
     or
     $ npm install flip-your-number -S
 
+
+<p align="center">
+    <img width="400" src="https://raw.githubusercontent.com/bluebill1049/react-simple-img/master/example/flip-your-number.gif" alt="Flip your number" />
+</p>
+
+
 ## Quick start
 
     import react from 'react';
