@@ -29,7 +29,7 @@ Features:
                 color="red"
                 background="white"
                 startAnimation
-                numbersToDisplay={12345}
+                numbersToDisplay"12345"
           />
         </div>;
     }
