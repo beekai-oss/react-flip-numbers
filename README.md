@@ -18,7 +18,7 @@ Features:
 
 
 <p align="center">
-    <img width="400" src="https://raw.githubusercontent.com/bluebill1049/flip-your-number/master/example/flip-your-number.gif" alt="Flip your number" />
+    <img width="200" src="https://raw.githubusercontent.com/bluebill1049/flip-your-number/master/example/flip-your-number.gif" alt="Flip your number" />
 </p>
 
 
