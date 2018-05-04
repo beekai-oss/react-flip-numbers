@@ -60,6 +60,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
 
   componentWillUnmount() {
     clearTimeout(this.updateNumberTimeout);
+    this.makeStatic.cancel();
   }
 
   updateNumberTimeout: TimeoutID;

@@ -4,7 +4,7 @@ import React from 'react';
 
 type PropTypes = {
   numbers: string | Array<string>,
-  nonNumberStyle: string,
+  nonNumberStyle?: {[string]: string | number},
   height: number,
   width: number,
   color: string,
@@ -93,4 +93,5 @@ FlipNumbers.defaultProps = {
   animate: true,
   startAnimation: false,
   delaySeconds: 0,
+  nonNumberStyle: {},
 };

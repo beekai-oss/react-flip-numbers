@@ -35,19 +35,11 @@ exports[`FlipNumbers should render correctly 1`] = `
     startAnimation={false}
     width={20}
   />
-  <FlipNumber
-    activeNumber={NaN}
-    background="white"
-    color="black"
-    delaySeconds={0.3}
-    durationSeconds={0.3}
-    height={20}
-    length={5}
-    perspective="1000px"
-    position={3}
-    startAnimation={false}
-    width={20}
-  />
+  <span
+    style=":"
+  >
+    :
+  </span>
   <FlipNumber
     activeNumber={0}
     background="white"
