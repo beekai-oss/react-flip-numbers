@@ -1,6 +1,6 @@
 {
   "name": "flip-ya-numbers",
-  "version": "0.0.1-beta.8",
+  "version": "1.0.0",
   "description": "flip your numbers",
   "main": "lib/index.js",
   "keywords": [
