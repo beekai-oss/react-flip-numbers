@@ -13,7 +13,8 @@ type PropTypes = {
   durationSeconds?: number,
   delaySeconds?: number,
   animate?: boolean,
-  startAnimation?: boolean
+  startAnimation?: boolean,
+  numberStyle: { [string]: string | number },
 };
 
 export default class FlipNumbers extends React.Component<PropTypes> {
@@ -24,6 +25,7 @@ export default class FlipNumbers extends React.Component<PropTypes> {
     startAnimation: false,
     delaySeconds: 0,
     nonNumberStyle: {},
+    numberStyle: {},
   };
 
   shouldComponentUpdate(nextProps: PropTypes) {
@@ -39,6 +41,7 @@ export default class FlipNumbers extends React.Component<PropTypes> {
     const {
       numbers,
       nonNumberStyle,
+      numberStyle,
       height,
       width,
       color,
@@ -79,6 +82,7 @@ export default class FlipNumbers extends React.Component<PropTypes> {
                   durationSeconds,
                   startAnimation,
                   delaySeconds,
+                  numberStyle,
                 }}
                 position={numberCounter}
                 length={numbers.length}
