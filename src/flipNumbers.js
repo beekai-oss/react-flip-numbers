@@ -59,6 +59,7 @@ export default class FlipNumbers extends React.Component<PropTypes> {
         style={{
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         {Array.from(numbers).map((n, key) => {
