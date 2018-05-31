@@ -26,6 +26,7 @@ type PropTypes = {
   activeNumber: number,
   delaySeconds: number,
   startAnimation: boolean,
+  numberStyle: { [string]: string | number },
 };
 
 type StateTypes = {
@@ -102,6 +103,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       delaySeconds,
       length,
       position,
+      numberStyle = {},
     } = this.props;
     const { degree, isStatic } = this.state;
     const viewPortSize = {
@@ -149,6 +151,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
                 color,
                 background,
                 transform: `rotateX(${rotateDegreePerNumber * i}deg) translateZ(${translateZ}px)`,
+                ...numberStyle,
               }}
               key={`${rotateDegreePerNumber * i}`}
             >
@@ -175,6 +178,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
             background,
             transform: `rotateX(0deg) translateZ(${translateZ}px)`,
             visibility: isStatic ? 'visible' : 'hidden',
+            ...numberStyle,
           }}
         >
           {activeNumber}

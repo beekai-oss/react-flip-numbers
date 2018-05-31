@@ -35,7 +35,8 @@ Features:
                 color="red"
                 background="white"
                 startAnimation
-                numbersToDisplay"12345"
+                numbers="12345"
+                numberStyle={{ color: "black" }}
           />
         </div>;
     }
