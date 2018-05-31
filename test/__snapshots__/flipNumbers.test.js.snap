@@ -6,6 +6,7 @@ exports[`FlipNumbers should render correctly 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "justifyContent": "center",
     }
   }
 >
