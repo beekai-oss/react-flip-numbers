@@ -47,6 +47,7 @@ Features:
 | :-------------------- | :------- | :------: | :------------------------------------------------------------------------------------- |
 | `numbers`      | string  |    ✓     |                                  |
 | `nonNumberStyle`            | string    |          | Css inline style for not number eg , : . |
+| `numberStyle`            | string    |          | Css inline style for number |
 | `height`              | number |    ✓      | Individual number height |
 | `width`              | number |    ✓      | Individual number width |
 | `color`              | string |     ✓     | Number color |
