@@ -1,7 +1,7 @@
-[![npm version](https://img.shields.io/npm/v/flip-ya-numbers.svg?style=flat-square)](https://www.npmjs.com/package/flip-ya-numbers)
-[![npm downloads](https://img.shields.io/npm/dm/flip-ya-numbers.svg?style=flat-square)](https://www.npmjs.com/package/flip-ya-numbers)
-[![npm](https://img.shields.io/npm/dt/flip-ya-numbers.svg?style=flat-square)](https://www.npmjs.com/package/flip-ya-numbers)
-[![npm](https://img.shields.io/npm/l/flip-ya-numbers.svg?style=flat-square)](https://www.npmjs.com/package/flip-ya-numbers)
+[![npm version](https://img.shields.io/npm/v/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
+[![npm downloads](https://img.shields.io/npm/dm/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
+[![npm](https://img.shields.io/npm/dt/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
+[![npm](https://img.shields.io/npm/l/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 
 > **Make number animation looks sexy** :clap:
 
@@ -12,9 +12,9 @@ Features:
 
 ## Install
 
-    $ yarn add flip-ya-numbers
+    $ yarn add react-flip-numbers
     or
-    $ npm install flip-ya-numbers -S
+    $ npm install react-flip-numbers -S
 
 
 <p align="center">
@@ -25,7 +25,7 @@ Features:
 ## Quick start
 
     import react from 'react';
-    import FlipNumbers from 'flip-ya-numbers';
+    import FlipNumbers from 'react-flip-numbers';
 
     export default function SexyComponent(props) {
         return <div>

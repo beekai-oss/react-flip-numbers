@@ -1,7 +1,7 @@
 {
-  "name": "flip-ya-numbers",
+  "name": "react-flip-numbers",
   "version": "1.0.2",
-  "description": "flip your numbers",
+  "description": "react flip your numbers",
   "main": "lib/index.js",
   "keywords": [
     "react",
