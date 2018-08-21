@@ -55,7 +55,6 @@
     "react-dom": ">= 15.6.1"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
     "react-simple-animate": "^1.9.0"
   }
 }
