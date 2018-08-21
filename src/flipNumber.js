@@ -1,5 +1,4 @@
 // @flow
-import debounce from 'lodash/debounce';
 import Animate from 'react-simple-animate';
 import React from 'react';
 
@@ -32,14 +31,12 @@ type PropTypes = {
 type StateTypes = {
   degree: number,
   rotateCounter: number,
-  isStatic: boolean,
 };
 
 export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
   state = {
     degree: 0,
     rotateCounter: 0, // eslint-disable-line react/no-unused-state
-    isStatic: false,
   };
 
   componentDidMount() {
@@ -50,32 +47,21 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
     this.updateNumber(activeNumber);
   }
 
-  shouldComponentUpdate(nextProps: PropTypes, nextState: StateTypes) {
+  shouldComponentUpdate(nextProps: PropTypes) {
     return (
       nextProps.activeNumber !== this.props.activeNumber ||
       this.state.degree === 0 ||
-      nextProps.startAnimation !== this.props.startAnimation ||
-      nextState.isStatic !== this.state.isStatic
+      nextProps.startAnimation !== this.props.startAnimation
     );
   }
 
   componentWillUnmount() {
     clearTimeout(this.updateNumberTimeout);
-    this.makeStatic.cancel();
   }
 
   updateNumberTimeout: TimeoutID;
 
-  makeStatic = debounce(() => {
-    this.setState({ isStatic: true });
-  }, this.props.durationSeconds * 1000);
-
-  makeDynamic = () => {
-    this.setState({ isStatic: false });
-  };
-
   updateNumber = (activeNumber: number) => {
-    this.makeDynamic();
     this.setState(({ rotateCounter }) => {
       const animateDegree = numbers.findIndex(v => v === activeNumber) * rotateDegreePerNumber;
 
@@ -87,7 +73,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
           : null),
         degree: (rotateCounter * revolutionDegrees) - animateDegree,
       };
-    }, this.makeStatic);
+    });
   };
 
   render() {
@@ -105,7 +91,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       position,
       numberStyle = {},
     } = this.props;
-    const { degree, isStatic } = this.state;
+    const { degree } = this.state;
     const viewPortSize = {
       width: `${width}px`,
       height: `${height + 3}px`,
@@ -177,7 +163,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
             color,
             background,
             transform: `rotateX(0deg) translateZ(${translateZ}px)`,
-            visibility: isStatic ? 'visible' : 'hidden',
+            visibility: 'hidden',
             ...numberStyle,
           }}
         >
