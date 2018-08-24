@@ -1,5 +1,5 @@
 {
-  "name": "react-flip-numbers",
+  "name": "react-react-flip-numberss",
   "version": "1.0.3",
   "description": "react flip your numbers",
   "main": "lib/index.js",
@@ -19,11 +19,11 @@
     "prepublish": "yarn test && yarn flow && yarn lint && yarn run clean && yarn build",
     "flow": "flow"
   },
-  "repository": "https://github.com/bluebill1049/flip-number.git",
+  "repository": "https://github.com/bluebill1049/react-flip-numbers.git",
   "author": "beier luo",
   "license": "Mit",
   "bugs": {
-    "url": "https://github.com/bluebill1049/flip-number/issues"
+    "url": "https://github.com/bluebill1049/react-flip-numbers/issues"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
