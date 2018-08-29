@@ -7,7 +7,7 @@
 
 Features:
 
-* Flip your nubmer in 3D space
+* Flip your numbers in 3D space
 * Super easy to use
 
 ## Install
