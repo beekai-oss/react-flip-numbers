@@ -6,7 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-jest.mock('react-simple-animate', () => 'Animate');
+jest.mock('react-simple-animate', () => ({ Animate: 'Animate' }));
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 

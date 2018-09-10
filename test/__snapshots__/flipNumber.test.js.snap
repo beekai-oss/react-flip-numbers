@@ -25,7 +25,7 @@ exports[`FlipNumber should render correctly 1`] = `
         "transformStyle": "preserve-3d",
       }
     }
-    startAnimation={true}
+    play={undefined}
     startStyle={
       Object {
         "height": "100%",
@@ -294,11 +294,11 @@ exports[`FlipNumber should return the correct position for matching number 1`] =
       Object {
         "height": "100%",
         "position": "absolute",
-        "transform": "rotateX(0deg)",
+        "transform": "rotateX(-72deg)",
         "transformStyle": "preserve-3d",
       }
     }
-    startAnimation={true}
+    play={undefined}
     startStyle={
       Object {
         "height": "100%",
