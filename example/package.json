@@ -5,8 +5,7 @@
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-flip-numbers": "^1.0.2",
-    "react-flip-numberss": "2.0.0",
+    "react-flip-numbers": "2.0.0",
     "react-scripts": "1.1.4",
     "react-simple-animate": "2.0.0"
   },

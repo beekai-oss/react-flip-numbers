@@ -5555,16 +5555,9 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-flip-numbers@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-flip-numbers/-/react-flip-numbers-1.0.2.tgz#803387932c64cd75441e86ee6fc3b2f060b751ec"
-  dependencies:
-    lodash "^4.17.10"
-    react-simple-animate "^1.9.0"
-
-react-flip-numberss@2.0.0:
+react-flip-numbers@2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-flip-numberss/-/react-flip-numberss-2.0.0.tgz#46d63d6664dffa4d04d9eb148a745c25be37edf2"
+  resolved "https://registry.yarnpkg.com/react-flip-numbers/-/react-flip-numbers-2.0.0.tgz#0d8c77c572407125771f07f9905f80270843f734"
   dependencies:
     react-simple-animate "2.0.0"
 
@@ -5616,10 +5609,6 @@ react-scripts@1.1.4:
 react-simple-animate@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-simple-animate/-/react-simple-animate-2.0.0.tgz#5bf6762584807d60636af7628a33a85c51c8e8d2"
-
-react-simple-animate@^1.9.0:
-  version "1.9.8"
-  resolved "https://registry.yarnpkg.com/react-simple-animate/-/react-simple-animate-1.9.8.tgz#149bcc848b4545946570cc07d7a56cee41987826"
 
 react@^16.4.2:
   version "16.4.2"
