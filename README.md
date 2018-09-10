@@ -25,18 +25,16 @@ Features:
     import react from 'react';
     import FlipNumbers from 'react-flip-numbers';
 
-    export default function SexyComponent(props) {
-        return <div>
-            <FlipNumbers
-                height="12px"
-                width="12px"
-                color="red"
-                background="white"
-                play
-                numbers="12345"
-                numberStyle={{ color: "black" }}
-          />
-        </div>;
+    export default () => {
+        return <FlipNumbers
+            height="12px"
+            width="12px"
+            color="red"
+            background="white"
+            play
+            numbers="12345"
+            numberStyle={{ color: "black" }}
+        />;
     }
 
 ## API
