@@ -16,11 +16,9 @@ Features:
     or
     $ npm install react-flip-numbers -S
 
-
 <p align="center">
     <img width="300" src="https://raw.githubusercontent.com/bluebill1049/react-flip-numbers/master/flip-ya-numbers.gif" alt="Flip your number" />
 </p>
-
 
 ## Quick start
 
@@ -34,7 +32,7 @@ Features:
                 width="12px"
                 color="red"
                 background="white"
-                startAnimation
+                play
                 numbers="12345"
                 numberStyle={{ color: "black" }}
           />
@@ -43,16 +41,16 @@ Features:
 
 ## API
 
-| Prop                  | Type     | Required | Description                                                                            |
-| :-------------------- | :------- | :------: | :------------------------------------------------------------------------------------- |
-| `numbers`      | string  |    ✓     |                                  |
-| `nonNumberStyle`            | string    |          | Css inline style for not number eg , : . |
-| `numberStyle`            | string    |          | Css inline style for number |
-| `height`              | number |    ✓      | Individual number height |
-| `width`              | number |    ✓      | Individual number width |
-| `color`              | string |     ✓     | Number color |
-| `background`              | string |    ✓      | Background color |
-| `perspective`              | number |          | Css 3D transition perspective |
-| `durationSeconds`              | number |          |  |
-| `delaySeconds`              | number |          |  |
-| `startAnimation`              | boolean |     ✓     | Start the animation |
+| Prop              | Type    | Required | Description                              |
+| :---------------- | :------ | :------: | :--------------------------------------- |
+| `numbers`         | string  |    ✓     |                                          |
+| `nonNumberStyle`  | string  |          | Css inline style for not number eg , : . |
+| `numberStyle`     | string  |          | Css inline style for number              |
+| `height`          | number  |    ✓     | Individual number height                 |
+| `width`           | number  |    ✓     | Individual number width                  |
+| `color`           | string  |    ✓     | Number color                             |
+| `background`      | string  |    ✓     | Background color                         |
+| `perspective`     | number  |          | Css 3D transition perspective            |
+| `durationSeconds` | number  |          |                                          |
+| `delaySeconds`    | number  |          |                                          |
+| `play`            | boolean |    ✓     | Start the animation                      |
