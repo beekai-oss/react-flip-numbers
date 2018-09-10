@@ -5562,6 +5562,12 @@ react-flip-numbers@^1.0.2:
     lodash "^4.17.10"
     react-simple-animate "^1.9.0"
 
+react-flip-numberss@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-flip-numberss/-/react-flip-numberss-2.0.0.tgz#46d63d6664dffa4d04d9eb148a745c25be37edf2"
+  dependencies:
+    react-simple-animate "2.0.0"
+
 react-scripts@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-1.1.4.tgz#d5c230e707918d6dd2d06f303b10f5222d017c88"
