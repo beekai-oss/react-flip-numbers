@@ -1,5 +1,5 @@
 // @flow
-import Animate from 'react-simple-animate';
+import { Animate } from 'react-simple-animate';
 import React from 'react';
 
 const commonAnimateStyle = {
@@ -13,7 +13,7 @@ const resetRouteCounter = 1000;
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 const rotateDegreePerNumber = 36;
 
-type PropTypes = {
+type Props = {
   position: number,
   length: number,
   height: number,
@@ -24,34 +24,48 @@ type PropTypes = {
   durationSeconds: number,
   activeNumber: number,
   delaySeconds: number,
-  startAnimation: boolean,
+  play: boolean,
   numberStyle: { [string]: string | number },
 };
 
-type StateTypes = {
+type State = {
   degree: number,
   rotateCounter: number,
 };
 
-export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
+const calculateDegrees = (rotateCounter, activeNumber) => {
+  const animateDegree = numbers.findIndex(v => v === activeNumber) * rotateDegreePerNumber;
+  const amountDegree = rotateCounter * revolutionDegrees;
+
+  return {
+    ...(activeNumber === 0
+      ? {
+        rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
+      }
+      : null),
+    degree: amountDegree - animateDegree,
+  };
+};
+
+export default class FlipNumber extends React.Component<Props, State> {
+  static getDerivedStateFromProps({ activeNumber }: Props, { rotateCounter }: State) {
+    return calculateDegrees(rotateCounter, activeNumber);
+  }
+
   state = {
     degree: 0,
     rotateCounter: 0, // eslint-disable-line react/no-unused-state
   };
 
   componentDidMount() {
-    this.updateNumberTimeout = setTimeout(() => this.updateNumber(this.props.activeNumber), 50 * this.props.position);
+    this.updateNumberTimeout = setTimeout(() => this.updateNumber(), 50 * this.props.position);
   }
 
-  componentWillReceiveProps({ activeNumber }: PropTypes) {
-    this.updateNumber(activeNumber);
-  }
-
-  shouldComponentUpdate(nextProps: PropTypes) {
+  shouldComponentUpdate(nextProps: Props) {
     return (
       nextProps.activeNumber !== this.props.activeNumber ||
       this.state.degree === 0 ||
-      nextProps.startAnimation !== this.props.startAnimation
+      nextProps.play !== this.props.play
     );
   }
 
@@ -61,19 +75,9 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
 
   updateNumberTimeout: TimeoutID;
 
-  updateNumber = (activeNumber: number) => {
-    this.setState(({ rotateCounter }) => {
-      const animateDegree = numbers.findIndex(v => v === activeNumber) * rotateDegreePerNumber;
-
-      return {
-        ...(activeNumber === 0
-          ? {
-            rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
-          }
-          : null),
-        degree: (rotateCounter * revolutionDegrees) - animateDegree,
-      };
-    });
+  updateNumber = () => {
+    // this.makeDynamic();
+    this.setState(({ rotateCounter }) => calculateDegrees(rotateCounter, this.props.activeNumber));
   };
 
   render() {
@@ -85,7 +89,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       width,
       perspective,
       durationSeconds,
-      startAnimation,
+      play,
       delaySeconds,
       length,
       position,
@@ -96,7 +100,8 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       width: `${width}px`,
       height: `${height + 3}px`,
     };
-    const translateZ = (height / 2) + height;
+    const halfElementHeight = height / 2;
+    const translateZ = halfElementHeight + height;
 
     return (
       <span
@@ -111,7 +116,7 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       >
         <Animate
           tag="span"
-          startAnimation={startAnimation}
+          play={play}
           startStyle={{
             ...commonAnimateStyle,
           }}

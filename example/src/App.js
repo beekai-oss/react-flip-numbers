@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FlipNumbers from "./src/flipNumbers";
+import FlipNumbers from "react-flip-numbers";
 
 class App extends Component {
   state = {
@@ -23,7 +23,7 @@ class App extends Component {
       <div className="App">
         <div className="App-intro">
           <FlipNumbers
-            startAnimation
+            play
             color="#fff"
             background="#333333"
             width={50}
