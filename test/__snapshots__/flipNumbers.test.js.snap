@@ -20,8 +20,8 @@ exports[`FlipNumbers should render correctly 1`] = `
     length={5}
     numberStyle={Object {}}
     perspective="1000px"
+    play={false}
     position={1}
-    startAnimation={false}
     width={20}
   />
   <FlipNumber
@@ -34,8 +34,8 @@ exports[`FlipNumbers should render correctly 1`] = `
     length={5}
     numberStyle={Object {}}
     perspective="1000px"
+    play={false}
     position={2}
-    startAnimation={false}
     width={20}
   />
   <span
@@ -53,8 +53,8 @@ exports[`FlipNumbers should render correctly 1`] = `
     length={5}
     numberStyle={Object {}}
     perspective="1000px"
+    play={false}
     position={4}
-    startAnimation={false}
     width={20}
   />
   <FlipNumber
@@ -67,8 +67,8 @@ exports[`FlipNumbers should render correctly 1`] = `
     length={5}
     numberStyle={Object {}}
     perspective="1000px"
+    play={false}
     position={5}
-    startAnimation={false}
     width={20}
   />
 </section>
