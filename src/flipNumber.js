@@ -76,7 +76,6 @@ export default class FlipNumber extends React.Component<Props, State> {
   updateNumberTimeout: TimeoutID;
 
   updateNumber = () => {
-    // this.makeDynamic();
     this.setState(({ rotateCounter }) => calculateDegrees(rotateCounter, this.props.activeNumber));
   };
 
