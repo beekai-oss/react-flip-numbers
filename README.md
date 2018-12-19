@@ -27,11 +27,12 @@ Features:
 
     export default () => {
         return <FlipNumbers
-            height="12px"
-            width="12px"
+            height={12}
+            width={12}
             color="red"
             background="white"
             play
+            perspective={100}
             numbers="12345"
             numberStyle={{ color: "black" }}
         />;
