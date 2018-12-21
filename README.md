@@ -20,8 +20,9 @@ Features:
     <img width="300" src="https://raw.githubusercontent.com/bluebill1049/react-flip-numbers/master/flip-ya-numbers.gif" alt="Flip your number" />
 </p>
 
-## Quick start
+## Quickstart
 
+```jsx
     import react from 'react';
     import FlipNumbers from 'react-flip-numbers';
 
@@ -37,6 +38,7 @@ Features:
             numberStyle={{ color: "black" }}
         />;
     }
+```
 
 ## API
 
