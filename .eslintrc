@@ -8,7 +8,24 @@
     "global-require": 0,
     "max-len": 0,
     "no-underscore-dangle": 0,
-    "import/first": 0
+    "import/first": 0,
+    "indent": 0,
+    "import/no-named-as-default": 0,
+    "no-plusplus": 0,
+    "arrow-parens": 0,
+    "no-console": 0,
+    "implicit-arrow-linebreak": 0,
+    "prefer-destructuring": 0,
+    "operator-linebreak": 0,
+    "object-curly-newline": 0,
+    "function-paren-newline": 0,
+    "react/destructuring-assignment": 0,
+    "react/require-default-props": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
   },
   "parser": "babel-eslint",
   "plugins": ["flowtype"]

@@ -25,7 +25,6 @@ exports[`FlipNumber should render correctly 1`] = `
         "transformStyle": "preserve-3d",
       }
     }
-    play={undefined}
     startStyle={
       Object {
         "height": "100%",
@@ -298,7 +297,6 @@ exports[`FlipNumber should return the correct position for matching number 1`] =
         "transformStyle": "preserve-3d",
       }
     }
-    play={undefined}
     startStyle={
       Object {
         "height": "100%",

@@ -1,6 +1,6 @@
 // @flow
-import FlipNumber from './flipNumber';
 import React from 'react';
+import FlipNumber from './flipNumber';
 
 type Props = {
   numbers: string | Array<string>,
@@ -14,7 +14,7 @@ type Props = {
   delaySeconds?: number,
   animate?: boolean,
   play?: boolean,
-  numberStyle: { [string]: string | number },
+  numberStyle?: { [string]: string | number },
 };
 
 export default class FlipNumbers extends React.Component<Props> {
