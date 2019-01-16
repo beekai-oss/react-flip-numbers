@@ -1,5 +1,5 @@
-[![npm version](https://img.shields.io/npm/v/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![Coverage Status](https://coveralls.io/repos/github/bluebill1049/react-flip-numbers/badge.svg?branch=master)](https://coveralls.io/github/bluebill1049/react-flip-numbers?branch=master)
+[![npm version](https://img.shields.io/npm/v/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![npm downloads](https://img.shields.io/npm/dm/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![npm](https://img.shields.io/npm/dt/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![npm](https://img.shields.io/npm/l/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
