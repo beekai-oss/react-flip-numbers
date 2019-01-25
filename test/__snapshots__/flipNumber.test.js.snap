@@ -2,6 +2,7 @@
 
 exports[`FlipNumber should render correctly 1`] = `
 <span
+  aria-hidden={true}
   style={
     Object {
       "display": "inline-block",
@@ -274,6 +275,7 @@ exports[`FlipNumber should render correctly 1`] = `
 
 exports[`FlipNumber should return the correct position for matching number 1`] = `
 <span
+  aria-hidden={true}
   style={
     Object {
       "display": "inline-block",

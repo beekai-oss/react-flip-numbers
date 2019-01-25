@@ -61,10 +61,11 @@ export default class FlipNumbers extends React.Component<Props> {
           alignItems: 'center',
           justifyContent: 'center',
         }}
+        aria-label={numbers}
       >
         {Array.from(numbers).map((n, key) => {
           const nonNumber = (
-            <span style={nonNumberStyle} key={numberCounter}>
+            <span aria-hidden style={nonNumberStyle} key={numberCounter}>
               {n}
             </span>
           );
@@ -96,6 +97,7 @@ export default class FlipNumbers extends React.Component<Props> {
 
           return !Number.isNaN(parseInt(n, 10)) ? (
             <span
+              aria-hidden
               style={{
                 padding: 0,
               }}

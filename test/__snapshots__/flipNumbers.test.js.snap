@@ -2,6 +2,7 @@
 
 exports[`FlipNumbers should render correctly 1`] = `
 <section
+  aria-label="00:00"
   style={
     Object {
       "alignItems": "center",
@@ -39,6 +40,7 @@ exports[`FlipNumbers should render correctly 1`] = `
     width={20}
   />
   <span
+    aria-hidden={true}
     style=":"
   >
     :

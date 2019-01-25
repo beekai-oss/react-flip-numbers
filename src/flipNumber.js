@@ -112,6 +112,7 @@ export default class FlipNumber extends React.Component<Props, State> {
           textAlign: 'left',
           height,
         }}
+        aria-hidden
       >
         <Animate
           tag="span"
