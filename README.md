@@ -6,8 +6,6 @@
 
 > **Make number animation looks sexy** :clap:
 
-Features:
-
 - Flip your numbers in 3D space
 - Super easy to use
 
