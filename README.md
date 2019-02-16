@@ -13,9 +13,7 @@
 
 ## Install
 
-    $ yarn add react-flip-numbers
-    or
-    $ npm install react-flip-numbers -S
+    npm install react-flip-numbers -S
 
 <p align="center">
     <img width="300" src="https://raw.githubusercontent.com/bluebill1049/react-flip-numbers/master/flip-ya-numbers.gif" alt="Flip your number" />
@@ -37,7 +35,6 @@ export default () => {
       play
       perspective={100}
       numbers="12345"
-      numberStyle={{ color: 'black' }}
     />
   );
 };
@@ -48,13 +45,13 @@ export default () => {
 | Prop              | Type    | Required | Description                              |
 | :---------------- | :------ | :------: | :--------------------------------------- |
 | `numbers`         | string  |    ✓     |                                          |
-| `nonNumberStyle`  | string  |          | Css inline style for not number eg , : . |
-| `numberStyle`     | string  |          | Css inline style for number              |
+| `play`            | boolean |    ✓     | Start the animation                      ||
 | `height`          | number  |    ✓     | Individual number height                 |
 | `width`           | number  |    ✓     | Individual number width                  |
 | `color`           | string  |    ✓     | Number color                             |
 | `background`      | string  |    ✓     | Background color                         |
 | `perspective`     | number  |          | Css 3D transition perspective            |
+| `nonNumberStyle`  | string  |          | Css inline style for not number eg , : . |
+| `numberStyle`     | string  |          | Css inline style for number              
 | `durationSeconds` | number  |          |                                          |
 | `delaySeconds`    | number  |          |                                          |
-| `play`            | boolean |    ✓     | Start the animation                      |
