@@ -64,6 +64,8 @@ export default class FlipNumber extends React.Component<Props, State> {
   shouldComponentUpdate(nextProps: Props) {
     return (
       nextProps.activeNumber !== this.props.activeNumber ||
+      nextProps.height !== this.props.height ||
+      nextProps.width !== this.props.width ||
       this.state.degree === 0 ||
       nextProps.play !== this.props.play
     );

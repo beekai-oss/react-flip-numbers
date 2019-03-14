@@ -31,6 +31,8 @@ export default class FlipNumbers extends React.Component<Props> {
   shouldComponentUpdate(nextProps: Props) {
     return (
       nextProps.numbers !== this.props.numbers ||
+      nextProps.height !== this.props.height ||
+      nextProps.width !== this.props.width ||
       nextProps.durationSeconds !== this.props.durationSeconds ||
       nextProps.delaySeconds !== this.props.delaySeconds ||
       nextProps.play !== this.props.play
