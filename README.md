@@ -5,6 +5,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![npm](https://img.shields.io/npm/dt/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![npm](https://img.shields.io/npm/l/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
+[![Donate](https://img.shields.io/badge/donate-paypal-orange.svg?style=flat-square)](https://www.paypal.com/donate/?token=_m4SCZMEfepZQZn6nTYqdf7_8aheqLH1Rpy8oteP8nUlD0Ubp1nm4hGcPos5KACFr4AW7m&country.x=AU&locale.x=AU)
 
 > **Make number animation looks sexy** :clap:
 
