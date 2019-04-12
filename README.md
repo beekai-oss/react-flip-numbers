@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![npm downloads](https://img.shields.io/npm/dm/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
 [![npm](https://img.shields.io/npm/dt/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
-[![npm](https://img.shields.io/npm/l/react-flip-numbers.svg?style=flat-square)](https://www.npmjs.com/package/react-flip-numbers)
+[![npm](https://badgen.net/bundlephobia/minzip/react-flip-numbers)](https://badgen.net/bundlephobia/minzip/react-flip-numbers)
 
 > **Make number animation looks sexy** :clap:
 
