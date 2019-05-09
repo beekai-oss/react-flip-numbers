@@ -16,7 +16,7 @@
     npm install react-flip-numbers -S
 
 <p align="center">
-    <img width="300" src="https://raw.githubusercontent.com/bluebill1049/react-flip-numbers/master/react-flip-numbers.gif" alt="react flip numbers" />
+    <img width="500" src="https://raw.githubusercontent.com/bluebill1049/react-flip-numbers/master/react-flip-numbers.gif" alt="react flip numbers" />
 </p>
 
 ## Quickstart
