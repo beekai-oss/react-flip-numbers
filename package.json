@@ -76,9 +76,7 @@
   },
   "peerDependencies": {
     "react": ">= 15.6.1",
-    "react-dom": ">= 15.6.1"
-  },
-  "dependencies": {
-    "react-simple-animate": "^2.6.0"
+    "react-dom": ">= 15.6.1",
+    "react-simple-animate": ">= 2.0.0"
   }
 }
