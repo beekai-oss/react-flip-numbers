@@ -40,8 +40,8 @@ const calculateDegrees = (rotateCounter, activeNumber) => {
   return {
     ...(activeNumber === 0
       ? {
-        rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
-      }
+          rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
+        }
       : null),
     degree: amountDegree - animateDegree,
   };
@@ -127,31 +127,34 @@ export default class FlipNumber extends React.Component<Props, State> {
             transform: `rotateX(${degree}deg)`,
           }}
           {...{ easeType, duration, delay }}
-        >
-          {numbers.map((n, i) => (
-            <span
-              style={{
-                ...viewPortSize,
-                height,
-                lineHeight: `${height}px`,
-                fontSize: `${height - 1}px`,
-                position: 'absolute',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-                WebkitFontSmoothing: 'antialiased',
-                color,
-                background,
-                transform: `rotateX(${rotateDegreePerNumber * i}deg) translateZ(${translateZ}px)`,
-                ...numberStyle,
-              }}
-              key={`${rotateDegreePerNumber * i}`}
-            >
-              {n}
+          render={({ style }) => (
+            <span style={style}>
+              {numbers.map((n, i) => (
+                <span
+                  style={{
+                    ...viewPortSize,
+                    height,
+                    lineHeight: `${height}px`,
+                    fontSize: `${height - 1}px`,
+                    position: 'absolute',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    WebkitFontSmoothing: 'antialiased',
+                    color,
+                    background,
+                    transform: `rotateX(${rotateDegreePerNumber * i}deg) translateZ(${translateZ}px)`,
+                    ...numberStyle,
+                  }}
+                  key={`${rotateDegreePerNumber * i}`}
+                >
+                  {n}
+                </span>
+              ))}
             </span>
-          ))}
-        </Animate>
+          )}
+        />
 
         <span
           data={length - position}

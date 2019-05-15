@@ -6375,10 +6375,10 @@ react-error-overlay@^4.0.0:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
   integrity sha512-FlsPxavEyMuR6TjVbSSywovXSEyOg6ZDj5+Z8nbsRl9EkOzAhEIcS+GLoQDC5fz/t9suhUXWmUrOBrgeUvrMxw==
 
-react-flip-numbers@3.0.0-beta.1:
-  version "3.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/react-flip-numbers/-/react-flip-numbers-3.0.0-beta.1.tgz#4948ff83ce44acae8eb5ecb55a4d3c0b3974f3d2"
-  integrity sha512-Gwu4/eeYS5Nbu6CIL+G/Pg+5LDtBRsn5bTO28RxG501T6McCjw7xcx978F0IYBjGzt/6pSDMaAEUOa/NSbvUsw==
+react-flip-numbers@3.0.1-beta.3:
+  version "3.0.1-beta.3"
+  resolved "https://registry.yarnpkg.com/react-flip-numbers/-/react-flip-numbers-3.0.1-beta.3.tgz#bd425d63e654ffb40b7cf67edbeee2b46be186b8"
+  integrity sha512-0Hk9WeKG9Nfycfwq8gIBCA0bfJRHoecs6555jKHIhi5COuZ1I6iOKvmq+sksY6g1EJjc1vsHGZCOpTg7bNVngw==
   dependencies:
     react-simple-animate "^3.0.1"
 
