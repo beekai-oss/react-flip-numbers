@@ -10,8 +10,8 @@ type Props = {
   color: string,
   background: string,
   perspective?: number,
-  durationSeconds?: number,
-  delaySeconds?: number,
+  duration?: number,
+  delay?: number,
   animate?: boolean,
   play?: boolean,
   numberStyle?: { [string]: string | number },
@@ -20,10 +20,10 @@ type Props = {
 export default class FlipNumbers extends React.Component<Props> {
   static defaultProps = {
     perspective: 500,
-    durationSeconds: 0.3,
+    duration: 0.3,
     animate: true,
     play: false,
-    delaySeconds: 0,
+    delay: 0,
     nonNumberStyle: {},
     numberStyle: {},
   };
@@ -33,8 +33,8 @@ export default class FlipNumbers extends React.Component<Props> {
       nextProps.numbers !== this.props.numbers ||
       nextProps.height !== this.props.height ||
       nextProps.width !== this.props.width ||
-      nextProps.durationSeconds !== this.props.durationSeconds ||
-      nextProps.delaySeconds !== this.props.delaySeconds ||
+      nextProps.duration !== this.props.duration ||
+      nextProps.delay !== this.props.delay ||
       nextProps.play !== this.props.play
     );
   }
@@ -49,10 +49,10 @@ export default class FlipNumbers extends React.Component<Props> {
       color,
       background,
       perspective,
-      durationSeconds,
+      duration,
       animate,
       play,
-      delaySeconds,
+      delay,
     } = this.props;
     let numberCounter = 0;
 
@@ -83,9 +83,9 @@ export default class FlipNumbers extends React.Component<Props> {
                   color,
                   background,
                   perspective,
-                  durationSeconds,
+                  duration,
                   play,
-                  delaySeconds,
+                  delay,
                   numberStyle,
                 }}
                 position={numberCounter}

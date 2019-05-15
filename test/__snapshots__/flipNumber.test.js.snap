@@ -15,10 +15,8 @@ exports[`FlipNumber should render correctly 1`] = `
   }
 >
   <Animate
-    delaySeconds={0}
-    durationSeconds={0.3}
     easeType="cubic-bezier(0.19, 1, 0.22, 1)"
-    endStyle={
+    end={
       Object {
         "height": "100%",
         "position": "absolute",
@@ -26,7 +24,7 @@ exports[`FlipNumber should render correctly 1`] = `
         "transformStyle": "preserve-3d",
       }
     }
-    startStyle={
+    start={
       Object {
         "height": "100%",
         "position": "absolute",
@@ -288,10 +286,8 @@ exports[`FlipNumber should return the correct position for matching number 1`] =
   }
 >
   <Animate
-    delaySeconds={0}
-    durationSeconds={0.3}
     easeType="cubic-bezier(0.19, 1, 0.22, 1)"
-    endStyle={
+    end={
       Object {
         "height": "100%",
         "position": "absolute",
@@ -299,7 +295,7 @@ exports[`FlipNumber should return the correct position for matching number 1`] =
         "transformStyle": "preserve-3d",
       }
     }
-    startStyle={
+    start={
       Object {
         "height": "100%",
         "position": "absolute",

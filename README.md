@@ -26,32 +26,22 @@ import react from 'react';
 import FlipNumbers from 'react-flip-numbers';
 
 export default () => {
-  return (
-    <FlipNumbers
-      height={12}
-      width={12}
-      color="red"
-      background="white"
-      play
-      perspective={100}
-      numbers="12345"
-    />
-  );
+  return <FlipNumbers height={12} width={12} color="red" background="white" play perspective={100} numbers="12345" />;
 };
 ```
 
 ## API
 
-| Prop              | Type    | Required | Description                              |
-| :---------------- | :------ | :------: | :--------------------------------------- |
-| `numbers`         | string  |    ✓     |                                          |
-| `play`            | boolean |    ✓     | Start the animation                      ||
-| `height`          | number  |    ✓     | Individual number height                 |
-| `width`           | number  |    ✓     | Individual number width                  |
-| `color`           | string  |    ✓     | Number color                             |
-| `background`      | string  |    ✓     | Background color                         |
-| `perspective`     | number  |          | Css 3D transition perspective            |
-| `nonNumberStyle`  | string  |          | Css inline style for not number eg , : . |
-| `numberStyle`     | string  |          | Css inline style for number              
-| `durationSeconds` | number  |          |                                          |
-| `delaySeconds`    | number  |          |                                          |
+| Prop             | Type    | Required | Description                              |
+| :--------------- | :------ | :------: | :--------------------------------------- |
+| `numbers`        | string  |    ✓     |                                          |
+| `play`           | boolean |    ✓     | Start the animation                      |  |
+| `height`         | number  |    ✓     | Individual number height                 |
+| `width`          | number  |    ✓     | Individual number width                  |
+| `color`          | string  |    ✓     | Number color                             |
+| `background`     | string  |    ✓     | Background color                         |
+| `perspective`    | number  |          | Css 3D transition perspective            |
+| `nonNumberStyle` | string  |          | Css inline style for not number eg , : . |
+| `numberStyle`    | string  |          | Css inline style for number              |
+| `duration`       | number  |          |                                          |
+| `delay`          | number  |          |                                          |

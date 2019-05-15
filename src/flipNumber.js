@@ -21,9 +21,9 @@ type Props = {
   background: string,
   width: number,
   perspective: number,
-  durationSeconds: number,
+  duration: number,
   activeNumber: number,
-  delaySeconds: number,
+  delay: number,
   play: boolean,
   numberStyle: { [string]: string | number },
 };
@@ -89,9 +89,9 @@ export default class FlipNumber extends React.Component<Props, State> {
       background,
       width,
       perspective,
-      durationSeconds,
+      duration,
       play,
-      delaySeconds,
+      delay,
       length,
       position,
       numberStyle = {},
@@ -119,14 +119,14 @@ export default class FlipNumber extends React.Component<Props, State> {
         <Animate
           tag="span"
           play={play}
-          startStyle={{
+          start={{
             ...commonAnimateStyle,
           }}
-          endStyle={{
+          end={{
             ...commonAnimateStyle,
             transform: `rotateX(${degree}deg)`,
           }}
-          {...{ easeType, durationSeconds, delaySeconds }}
+          {...{ easeType, duration, delay }}
         >
           {numbers.map((n, i) => (
             <span
