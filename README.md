@@ -39,7 +39,7 @@ export default () => {
 | `height`         | number  |    ✓     | Individual number height                 |
 | `width`          | number  |    ✓     | Individual number width                  |
 | `color`          | string  |    ✓     | Number color                             |
-| `background`     | string  |    ✓     | Background color                         |
+| `background`     | string  |          | Background color                         |
 | `perspective`    | number  |          | Css 3D transition perspective            |
 | `nonNumberStyle` | string  |          | Css inline style for not number eg , : . |
 | `numberStyle`    | string  |          | Css inline style for number              |
