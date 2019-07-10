@@ -8,7 +8,7 @@ type Props = {
   height: number,
   width: number,
   color: string,
-  background: string,
+  background?: string,
   perspective?: number,
   duration?: number,
   delay?: number,
