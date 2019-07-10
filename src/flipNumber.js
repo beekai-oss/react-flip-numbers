@@ -57,6 +57,8 @@ export default class FlipNumber extends React.Component<Props, State> {
     rotateCounter: 0, // eslint-disable-line react/no-unused-state
   };
 
+  updateNumberTimeout: TimeoutID;
+
   componentDidMount() {
     this.updateNumberTimeout = setTimeout(() => this.updateNumber(), 50 * this.props.position);
   }
@@ -78,8 +80,6 @@ export default class FlipNumber extends React.Component<Props, State> {
   updateNumber = () => {
     this.setState(({ rotateCounter }) => calculateDegrees(rotateCounter, this.props.activeNumber));
   };
-
-  updateNumberTimeout: TimeoutID;
 
   render() {
     const {
