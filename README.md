@@ -40,8 +40,8 @@ export default () => {
 | `width`          | number  |    ✓     | Individual number width                  |
 | `color`          | string  |    ✓     | Number color                             |
 | `background`     | string  |          | Background color                         |
-| `perspective`    | number  |          | Css 3D transition perspective            |
-| `nonNumberStyle` | string  |          | Css inline style for not number eg , : . |
-| `numberStyle`    | string  |          | Css inline style for number              |
+| `perspective`    | number  |          | CSS 3D transition perspective            |
+| `nonNumberStyle` | string  |          | CSS inline style for not number eg , : . |
+| `numberStyle`    | string  |          | CSS inline style for number              |
 | `duration`       | number  |          |                                          |
 | `delay`          | number  |          |                                          |
