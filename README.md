@@ -46,11 +46,6 @@ export default () => {
 | `duration`       | number  |          |                                          |
 | `delay`          | number  |          |                                          |
 
-
-## Sponsors
-
-Thank you very much for those kind people with their sponsorship to this project.
-
 ## Sponsors
 
 Thank you very much for those kind people with their sponsorship to this project.
