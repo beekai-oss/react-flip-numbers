@@ -26,6 +26,7 @@ type Props = {
   delay: number,
   play: boolean,
   numberStyle: { [string]: string | number },
+  className?: string,
 };
 
 type State = {
@@ -65,6 +66,7 @@ export default class FlipNumber extends React.Component<Props, State> {
 
   shouldComponentUpdate(nextProps: Props) {
     return (
+      nextProps.className !== this.props.className ||
       nextProps.activeNumber !== this.props.activeNumber ||
       nextProps.height !== this.props.height ||
       nextProps.width !== this.props.width ||
@@ -95,6 +97,7 @@ export default class FlipNumber extends React.Component<Props, State> {
       length,
       position,
       numberStyle = {},
+      className,
     } = this.props;
     const { degree } = this.state;
     const viewPortSize = {
@@ -114,6 +117,7 @@ export default class FlipNumber extends React.Component<Props, State> {
           textAlign: 'left',
           height,
         }}
+        className={className}
         aria-hidden
       >
         <Animate
