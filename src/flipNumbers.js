@@ -4,7 +4,7 @@ import FlipNumber from './flipNumber';
 
 type Props = {
   numbers: string | Array<string>,
-  nonNumberStyle?: { [string]: string | number },
+  nonNumberStyle?: React.CSSProperites,
   numberContainerClassName?: string,
   nonNumberClassName?: string,
   height: number,
