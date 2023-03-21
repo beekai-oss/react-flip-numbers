@@ -110,7 +110,7 @@ export default class FlipNumbers extends React.Component<Props> {
               style={{
                 padding: 0,
               }}
-              className={nonNumberStyle}
+              style={nonNumberStyle}
               key={numberCounter}
             >
               {n}
