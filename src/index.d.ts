@@ -7,9 +7,11 @@ declare module 'react-flip-numbers' {
     delay?: number;
     duration?: number;
     height: number;
-    nonNumberStyles?: React.CSSProperties;
+    nonNumberClassName?: string;
+    nonNumberStyle?: React.CSSProperties;
+    numberClassName?: string;
     numbers: string;
-    numberStyles?: React.CSSProperties;
+    numberStyle?: React.CSSProperties;
     perspective?: number;
     play: boolean;
     width: number;
