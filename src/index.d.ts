@@ -9,7 +9,7 @@ declare module 'react-flip-numbers' {
     height: number;
     nonNumberClassName?: string;
     nonNumberStyle?: React.CSSProperties;
-    numberContainerClassName?: string;
+    numberClassName?: string;
     numbers: string;
     numberStyle?: React.CSSProperties;
     perspective?: number;

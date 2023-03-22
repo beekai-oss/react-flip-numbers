@@ -5,7 +5,7 @@ import FlipNumber from './flipNumber';
 type Props = {
   numbers: string | Array<string>,
   nonNumberStyle?: React.CSSProperites,
-  numberContainerClassName?: string,
+  numberClassName?: string,
   nonNumberClassName?: string,
   height: number,
   width: number,
@@ -33,7 +33,7 @@ export default class FlipNumbers extends React.Component<Props> {
   shouldComponentUpdate(nextProps: Props) {
     return (
       nextProps.nonNumberClassName !== this.props.nonNumberClassName ||
-      nextProps.numberContainerClassName !== this.props.numberContainerClassName ||
+      nextProps.numberClassName !== this.props.numberClassName ||
       nextProps.numbers !== this.props.numbers ||
       nextProps.height !== this.props.height ||
       nextProps.width !== this.props.width ||
@@ -48,7 +48,7 @@ export default class FlipNumbers extends React.Component<Props> {
       numbers,
       nonNumberStyle,
       numberStyle,
-      numberContainerClassName,
+      numberClassName,
       nonNumberClassName,
       height,
       width,
@@ -97,7 +97,7 @@ export default class FlipNumbers extends React.Component<Props> {
                 position={numberCounter}
                 length={numbers.length}
                 activeNumber={parseInt(n, 10)}
-                className={numberContainerClassName}
+                className={numberClassName}
               />
             ) : (
               nonNumber
