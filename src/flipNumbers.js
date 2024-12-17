@@ -4,7 +4,7 @@ import FlipNumber from './flipNumber';
 
 type Props = {
   numbers: string | Array<string>,
-  nonNumberStyle?: React.CSSProperites,
+  nonNumberStyle?: Object,
   numberClassName?: string,
   nonNumberClassName?: string,
   height: number,
@@ -107,10 +107,9 @@ export default class FlipNumbers extends React.Component<Props> {
           return !Number.isNaN(parseInt(n, 10)) ? (
             <span
               aria-hidden
-              style={{
+              style={nonNumberStyle || {
                 padding: 0,
               }}
-              style={nonNumberStyle}
               key={numberCounter}
             >
               {n}

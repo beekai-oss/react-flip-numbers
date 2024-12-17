@@ -25,7 +25,7 @@ type Props = {
   activeNumber: number,
   delay: number,
   play: boolean,
-  numberStyle: React.CSSProperites,
+  numberStyle: Object,
   className?: string,
 };
 
